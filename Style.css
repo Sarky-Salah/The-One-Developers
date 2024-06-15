@@ -1,0 +1,223 @@
+/* styles.css */
+
+/* General styles */
+body {
+ font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+ color: white;
+ margin: auto;
+}
+
+p {
+ color: #666;
+}
+
+/* Navbar styles */
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #333;
+ padding: 10px 20px;
+}
+
+.logo {
+ font-size: 24px;
+ color: #fff;
+ font-weight: bold;
+}
+
+.nav-links {
+ list-style: none;
+ display: flex;
+}
+
+.nav-links li {
+ margin: 0 15px;
+}
+
+.nav-links a {
+ text-decoration: none;
+ color: #fff;
+ padding: 7px 14px;
+ transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+ background-color: #fff;
+ color: #333;
+ border-radius: 4px;
+}
+
+.menu-toggle {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ color: white;
+}
+
+.menu-toggle .bar {
+ width: 25px;
+ height: 3px;
+ background-color: #fff;
+ margin: 4px 0;
+ color: white;
+}
+
+@media (max-width: 768px) {
+ .nav-links {
+     display: none;
+     flex-direction: column;
+     width: 100%;
+ }
+
+ .nav-links li {
+     text-align: center;
+     margin: 10px 0;
+ }
+
+ .menu-toggle {
+     display: flex;
+ }
+
+ .nav-links.active {
+     display: flex;
+ }
+}
+
+/* Home Section */
+#home {
+ text-align: center;
+ padding: 2rem 0;
+}
+
+/* Projects Section */
+#projects {
+ padding: 2rem 0;
+}
+
+.Projects {
+    background-color: #1d242a;
+    width: 90%; /* Default width for smaller screens */
+    max-width: 800px; /* Maximum width */
+    height: auto; /* Allow height to adjust based on content */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: #666 solid 5px;
+    padding: 20px; /* Add some padding for better spacing */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    border-radius: 20px;
+}
+
+.card {
+ border: none;
+ box-shadow: 0 4px 8px #0000001a;
+}
+
+.card-img-top {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+ object-fit: cover;
+ margin: auto;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ display: block;
+ border-radius: 20px;
+}
+
+/* For medium to large screens */
+@media (min-width: 600px) {
+    .Projects {
+        width: 75%;
+    }
+}
+
+/* For larger screens */
+@media (min-width: 800px) {
+    .Projects {
+        width: 50%;
+    }
+}
+
+.card-body {
+ text-align: center;
+}
+
+/* About Us Section */
+#about {
+ padding: 2rem 0;
+ text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+ .nav-link {
+     margin-left: 0;
+ }
+}
+
+.profile{
+ border-radius: 50%;
+ width: 200px;
+ height: 200px;
+}
+
+.project-Button{
+    background-color: #666;
+    margin-bottom: 20px;
+    text-decoration-style: none;
+    display: inline-block;
+    margin: auto;
+    display: block;
+}
+
+.project-Button a {
+    text-decoration: none; /* Remove underline from link */
+    color: white; /* Ensure text color is visible */
+}
+
+.btn-primary {
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding for better appearance */
+    border-radius: 5px; /* Round corners */
+}
+
+#header .left h1 {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    margin: 0;
+}
+
+.Headings{
+    background-color: #666;
+    color: white;
+    margin: auto;
+    display: block;
+    align-items: center;
+}
+
+.feedback-Form{
+    background-color: #1d242a;
+    border: #666 solid 5px;
+    border-radius: 30px;
+    width: fit-content;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.feedback-Formdetails{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    max-width: 500px;
+}
+
+.paragraph{
+    color: white;
+}
+
