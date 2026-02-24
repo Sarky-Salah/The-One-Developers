@@ -221,3 +221,21 @@ p {
     color: white;
 }
 
+.paragraphs{
+    color: white;
+    text-align: left;
+}
+
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.education-table th, .education-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.education-table th {
+}
