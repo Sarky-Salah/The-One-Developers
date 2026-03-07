@@ -159,6 +159,16 @@ p {
  }
 }
 
+#google_translate_element {
+    transform: scale(0.8);
+    float: left;
+}
+
+.goog-te-combo {
+    padding: 4px;
+    border-radius: 6px;
+}
+
 .profile{
  border-radius: 50%;
  width: 200px;

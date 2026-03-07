@@ -11,19 +11,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 });
 
-function changeLanguage(lang) {
-    if (lang === "en") {
-        document.getElementById("title").innerText = "Welcome";
-        document.getElementById("about").innerText = "I am a developer";
-    }
 
-    if (lang === "fr") {
-        document.getElementById("title").innerText = "Bienvenue";
-        document.getElementById("about").innerText = "Je suis développeur";
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      { pageLanguage: 'en' },
+      'google_translate_element'
+    );
+  
+    loadSavedLanguage();
+  }
+  
+  function saveLanguage() {
+    const select = document.querySelector(".goog-te-combo");
+  
+    if (select) {
+      select.addEventListener("change", function () {
+        localStorage.setItem("siteLanguage", this.value);
+      });
     }
-
-    if (lang === "ar") {
-        document.getElementById("title").innerText = "مرحبا";
-        document.getElementById("about").innerText = "أنا مطور";
+  }
+  
+  function loadSavedLanguage() {
+    const savedLang = localStorage.getItem("siteLanguage");
+  
+    if (savedLang) {
+      const interval = setInterval(() => {
+        const select = document.querySelector(".goog-te-combo");
+  
+        if (select) {
+          select.value = savedLang;
+          select.dispatchEvent(new Event("change"));
+          clearInterval(interval);
+        }
+      }, 500);
     }
-}
+  
+    saveLanguage();
+  }
